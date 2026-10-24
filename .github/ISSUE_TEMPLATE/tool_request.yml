@@ -1,0 +1,26 @@
+name: New tool
+description: Propose a tool the agent can call.
+labels: [enhancement, tool]
+body:
+  - type: input
+    id: name
+    attributes: { label: Tool name, placeholder: book_engineer_visit }
+    validations: { required: true }
+  - type: textarea
+    id: why
+    attributes: { label: What callers need it for }
+    validations: { required: true }
+  - type: textarea
+    id: schema
+    attributes: { label: Input schema (JSON Schema) }
+    validations: { required: true }
+  - type: dropdown
+    id: effect
+    attributes:
+      label: Side effects
+      options: [Read-only, Writes account data, Transfers the call]
+    validations: { required: true }
+  - type: input
+    id: latency
+    attributes: { label: Expected p95 latency of the backend, placeholder: 250ms }
+    validations: { required: true }

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/rexhinokovaci/nova-sonic-voice-agent/security/advisories/new
+    about: Report privately. Please don't open a public issue.
+  - name: Question
+    url: https://github.com/rexhinokovaci/nova-sonic-voice-agent/discussions
+    about: How-to questions and design discussion.

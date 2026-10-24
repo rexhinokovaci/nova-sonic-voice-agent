@@ -1,0 +1,42 @@
+name: Bug report
+description: The agent or the session behaves differently from what the code or docs say.
+labels: [bug, triage]
+body:
+  - type: markdown
+    attributes:
+      value: Don't paste caller audio, transcripts with personal data, or account numbers.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        [
+          Protocol / events,
+          Session lifecycle,
+          Tools,
+          Barge-in,
+          Session renewal,
+          Latency metrics,
+          Audio conversion,
+          Playground,
+        ]
+    validations: { required: true }
+  - type: dropdown
+    id: transport
+    attributes:
+      label: Transport
+      options: [Bedrock (real model), ScriptedModel, Both]
+    validations: { required: true }
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: A protocol trace (`npm run agent -- --trace`) helps a lot. Redact anything personal.
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes: { label: Expected }
+    validations: { required: true }
+  - type: input
+    id: model
+    attributes: { label: Model ID and region, placeholder: amazon.nova-2-sonic-v1:0 / us-east-1 }
