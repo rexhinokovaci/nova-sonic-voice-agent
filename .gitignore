@@ -1,0 +1,8 @@
+node_modules/
+coverage/
+site/
+.env
+.DS_Store
+*.wav
+!test/fixtures/*.wav
+out/
